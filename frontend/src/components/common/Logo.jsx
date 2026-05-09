@@ -1,16 +1,22 @@
 import logo from "../../assets/logo-icon.png";
 
-const Logo = () => {
+const Logo = ({
+  logoSize = "w-40 md:w-150",
+  textSize = "text-3xl",
+}) => {
+
   return (
     <div className="flex flex-col items-center">
 
+      {/* LOGO */}
       <img
         src={logo}
         alt="ICON Logo"
-        className="w-40 md:w-150 mb-2"
+        className={`${logoSize} mb-2`}
       />
 
-      <p className="text-3xl font-medium text-white text-center">
+      {/* TEXT */}
+      <p className={`${textSize} font-medium text-white text-center`}>
         <span className="text-yellow-400 font-bold">I</span>PB{" "}
         <span className="text-yellow-400 font-bold">C</span>areer{" "}
         <span className="text-yellow-400 font-bold">O</span>pportunity{" "}

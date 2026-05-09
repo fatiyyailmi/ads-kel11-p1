@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import bgImage from "../../assets/bg-ahn.png";
 import Logo from "../../components/common/Logo";
+import Button from "../../components/ui/Button";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -32,12 +33,12 @@ const LandingPage = () => {
         </p>
 
         {/* Button */}
-        <button
-          onClick={() => navigate("/select-role")}
-          className="bg-kuning-tua hover:bg-yellow-300 text-bold-blue font-semibold px-10 py-3 rounded-full transition duration-300 shadow-lg"
-        >
-          Mulai
-        </button>
+        <Button
+        label="Mulai"
+        to="/select-role"
+        className="w-auto md:w-[200px] self-center mt-8"
+        />
+
       </div>
       
     </div>
