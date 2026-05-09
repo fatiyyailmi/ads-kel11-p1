@@ -21,15 +21,16 @@ const LoginMitra = () => {
         
       {/* Content */}
         <div className="relative z-10 text-center text-white px-6 items-center max-w-3xl">
-                    <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-8">
                 <Logo 
                     logoSize="w-100"
                     textSize="text-2xl"
                 />
                 <LoginForm
-                    role="Mitra"
-                    registerPath="/register-mitra"
-                    />
+                  role="Mitra"
+                  registerPath="/register-mitra"
+                  dashboardPath="/dashboard-mitra"
+                />
             </div>
           </div>
           

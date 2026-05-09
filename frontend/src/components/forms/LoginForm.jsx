@@ -9,6 +9,7 @@ import Button from "../ui/Button";
 const LoginForm = ({
   role = "User",
   registerPath = "/register",
+  dashboardPath = "/",
 }) => {
 
   const navigate = useNavigate();
@@ -53,9 +54,9 @@ const LoginForm = ({
             />
 
           {/* BUTTON */}
-          <Button
+            <Button
             label="Masuk"
-            to="/dashboard-mahasiswa"
+            to={dashboardPath}
             className="w-auto md:w-[200px] self-center mt-8"
             />
 

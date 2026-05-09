@@ -30,6 +30,7 @@ const LoginMhs = () => {
                 <LoginForm
                     role="Mahasiswa IPB"
                     registerPath="/register-mahasiswa"
+                    dashboardPath="/dashboard-mahasiswa"
                     />
             </div>
         </div>
