@@ -4,6 +4,9 @@ import Logo from "../../components/common/Logo";
 import LoginForm from "../../components/forms/LoginForm";
 import BackButton from "../../components/ui/BackButton";
 
+const role = "Mahasiswa IPB";
+const emailPlaceholder = "Masukkan email IPB Anda";
+
 const LoginMhs = () => {
   const navigate = useNavigate();
 
@@ -30,7 +33,8 @@ const LoginMhs = () => {
                     role="Mahasiswa IPB"
                     signUpPath="/sign-up-mahasiswa"
                     dashboardPath="/dashboard-mahasiswa"
-                    />
+                    emailPlaceholder={emailPlaceholder}
+                />
             </div>
         </div>
      

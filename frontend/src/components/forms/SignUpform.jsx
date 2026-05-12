@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import FormField from "./FormField";
 import Button from "../ui/Button";
@@ -12,6 +13,90 @@ const SignUpForm = ({
 }) => {
 
   const navigate = useNavigate();
+
+  const initialFormData = {};
+
+  fields.forEach((field) => {
+    initialFormData[field.name] = "";
+  });
+
+  const [formData, setFormData] = useState(initialFormData);
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+
+  };
+
+  const validateForm = () => {
+
+    let newErrors = {};
+
+    fields.forEach((field) => {
+
+      const value = formData[field.name]?.trim();
+
+      // REQUIRED FIELD
+      if (!value) {
+        newErrors[field.name] =
+          `${field.label} wajib diisi.`;
+
+        return;
+      }
+
+      // EMAIL VALIDATION
+      if (field.type === "email") {
+
+        const emailRegex =
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(value)) {
+          newErrors[field.name] =
+            "Format email tidak valid.";
+        }
+      }
+
+      // PASSWORD VALIDATION
+      if (field.name === "password") {
+
+        if (value.length < 8) {
+          newErrors[field.name] =
+            "Password minimal 8 karakter.";
+        }
+      }
+
+      // CONFIRM PASSWORD
+      if (field.name === "confirmPassword") {
+
+        if (value !== formData.password) {
+          newErrors[field.name] =
+            "Konfirmasi password tidak cocok.";
+        }
+      }
+
+    });
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    if (validateForm()) {
+
+      console.log("DATA REGISTER:", formData);
+
+      navigate(loginPath);
+    }
+  };
 
   return (
 
@@ -32,7 +117,10 @@ const SignUpForm = ({
       </h1>
 
       {/* FORM */}
-      <form className="relative z-10">
+      <form
+        onSubmit={handleSubmit}
+        className="relative z-10"
+      >
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
 
@@ -40,9 +128,19 @@ const SignUpForm = ({
 
             <FormField
               key={index}
+
               label={field.label}
               type={field.type}
               placeholder={field.placeholder}
+
+              name={field.name}
+
+              value={formData[field.name]}
+              onChange={handleChange}
+
+              options={field.options}
+
+              error={errors[field.name]}
             />
 
           ))}
@@ -51,11 +149,13 @@ const SignUpForm = ({
 
         {/* BUTTON */}
         <div className="mt-10">
+
           <Button
             label="Daftar"
-            to="/"
+            type="submit"
             className="w-auto md:w-[200px] self-center"
           />
+
         </div>
 
         {/* LOGIN */}

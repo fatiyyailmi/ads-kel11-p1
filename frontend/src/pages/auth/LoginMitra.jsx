@@ -4,6 +4,9 @@ import Logo from "../../components/common/Logo";
 import LoginForm from "../../components/forms/LoginForm";
 import BackButton from "../../components/ui/BackButton";
 
+const role = "Mitra";
+const emailPlaceholder = "Masukkan email perusahaan Anda";
+
 const LoginMitra = () => {
   const navigate = useNavigate();
 
@@ -16,9 +19,9 @@ const LoginMitra = () => {
     >
       {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-bold-blue via-bold-blue/80 to-bold-blue/40"></div>
-      
-        <BackButton to="/select-role" />
         
+        <BackButton to="/select-role" />
+
       {/* Content */}
         <div className="relative z-10 text-center text-white px-6 items-center">
             <div className="flex flex-col items-center gap-8">
@@ -27,14 +30,15 @@ const LoginMitra = () => {
                     textSize="text-2xl"
                 />
                 <LoginForm
-                    role="Mitra"
+                    role={role}
                     signUpPath="/sign-up-mitra"
                     dashboardPath="/dashboard-mitra"
-                    />
+                    emailPlaceholder={emailPlaceholder}
+                />
             </div>
         </div>
-          
-    </div>
+     
+      </div>
       
   );
 };

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import bgImage from "../../assets/bg-ahn.png";
 import FormField from "./FormField";
 import Logo from "../common/Logo";
@@ -10,15 +11,57 @@ const LoginForm = ({
   role = "User",
   signUpPath = "/sign-up",
   dashboardPath = "/",
+  emailPlaceholder = "Masukkan email",
 }) => {
 
+  const [formData, setFormData] = useState({
+  email: "",
+  password: "",
+});
+  
+  const [errors, setErrors] = useState({});
+
   const navigate = useNavigate();
+  const validateForm = () => {
+  let newErrors = {};
+
+  // EMAIL
+  if (!formData.email) {
+    newErrors.email = "Email wajib diisi.";
+  }
+
+  // PASSWORD
+  if (!formData.password) {
+    newErrors.password = "Password wajib diisi.";
+  } else if (formData.password.length < 8) {
+    newErrors.password = "Password minimal 8 karakter.";
+  }
+
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (validateForm()) {
+    console.log("LOGIN BERHASIL");
+    navigate(dashboardPath);
+  }
+};
+
+  const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
 
   return (
     <div>
 
       {/* Card */}
-      <div className="relative z-10 bg-white rounded-2xl w-full max-w-6xl h-auto overflow-hidden shadow-2xl px-10 md:px-15 py-10">
+      <div className="relative z-10 bg-white rounded-2xl w-128 h-auto overflow-hidden shadow-2xl px-10 md:px-15 py-10">
 
         {/* Ornament */}
         <div className="absolute right-[-100px] bottom-[-50px] opacity-45 pointer-events-none">
@@ -35,28 +78,37 @@ const LoginForm = ({
         </h1>
 
         {/* Form */}
-        <form className="relative z-10 flex flex-col gap-5">
+        <form
+          onSubmit={handleSubmit}
+          className="relative z-10 flex flex-col gap-5"
+        >
 
           {/* EMAIL */}
-            <FormField
-            label="Email"
-            type="email"
-            placeholder="Gunakan email IPB"
-            className="w-100"
-            />
+        <FormField
+          label="Email"
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder={emailPlaceholder}
+          error={errors.email}
+        />
 
           {/* PASSWORD */}
             <FormField
-            label="Password"
-            type="password"
-            placeholder="Ketik password Anda disini"
-            className="w-100"
+              label="Password"
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Masukkan password Anda"
+              error={errors.password}
             />
 
           {/* BUTTON */}
             <Button
             label="Masuk"
-            to={dashboardPath}
+            type="submit"
             className="w-auto md:w-[200px] self-center mt-8"
             />
 

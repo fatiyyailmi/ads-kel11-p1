@@ -3,7 +3,7 @@ import bgImage from "../../assets/bg-ahn.png";
 import Logo from "../../components/common/Logo";
 import LoginForm from "../../components/forms/LoginForm";
 import BackButton from "../../components/ui/BackButton";
-import SignupForm from "../../components/forms/SignupForm";
+import SignUpForm from "../../components/forms/SignUpForm";
 
 const SignUpMhs = () => {
   const navigate = useNavigate();
@@ -28,14 +28,14 @@ const SignUpMhs = () => {
                     logoSize="w-100"
                     textSize="text-2xl"
                 />
-                <SignupForm
+                <SignUpForm
                     role="Mahasiswa IPB"
                     fields={[
-                        { label: "Nama Lengkap", type: "text", placeholder: "Masukkan nama lengkap" },
-                        { label: "Email", type: "email", placeholder: "Gunakan email IPB" },
-                        { label: "NIM", type: "text", placeholder: "Masukkan NIM" },
-                        { label: "Password", type: "password", placeholder: "Masukkan password" },
-                        {label: "Fakultas",
+                        { name: "fullName", label: "Nama Lengkap", type: "text", placeholder: "Masukkan nama lengkap" },
+                        { name: "email", label: "Email", type: "email", placeholder: "Gunakan email IPB" },
+                        { name: "nim", label: "NIM", type: "text", placeholder: "Masukkan NIM" },
+                        { name: "password", label: "Password", type: "password", placeholder: "Masukkan password" },
+                        { name: "faculty", label: "Fakultas",
                           type: "select",
                           placeholder: "Pilih fakultas",
                           options: [
@@ -54,9 +54,10 @@ const SignUpMhs = () => {
                             "Sekolah Sains Data, Matematika, dan Informatika",
                           ]
                         },  
-                        { label: "Konfirmasi Password", type: "password", placeholder: "Konfirmasi password" },
-                        { label: "Program Studi", type: "text", placeholder: "Masukkan program studi" }
+                        { name: "confirmPassword", label: "Konfirmasi Password", type: "password", placeholder: "Konfirmasi password" },
+                        { name: "studyProgram", label: "Program Studi", type: "text", placeholder: "Masukkan program studi" }
                     ]}
+                    className="text-light-blue"
                     loginPath="/login-mahasiswa"
                 />
             </div>
