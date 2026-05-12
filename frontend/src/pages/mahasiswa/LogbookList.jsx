@@ -1,5 +1,3 @@
-import DashboardLayoutMhs from "../../components/layout/mahasiswa/DashboardLayoutMhs";
-
 const LogbookList = () => {
     return (
         <DashboardLayoutMhs>

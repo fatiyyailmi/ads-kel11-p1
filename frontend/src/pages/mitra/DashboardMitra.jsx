@@ -1,5 +1,3 @@
-import DashboardLayoutMitra from "../../components/layout/mitra/DashboardLayoutMitra";
-
 const DashboardMitra = () => {
     return (
         <DashboardLayoutMitra>

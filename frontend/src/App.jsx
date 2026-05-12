@@ -10,17 +10,23 @@ import SignUpMhs from './pages/auth/SignUpMhs';
 import SignUpMitra from './pages/auth/SignUpMitra';
 
 //mahasiswa
+import DashboardLayoutMhs from './components/layout/mahasiswa/DashboardLayoutMhs';
 import DashboardMhs from './pages/mahasiswa/DashboardMhs';
 import FormPendaftaran from './pages/mahasiswa/FormPendaftaran';
 import LamaranList from './pages/mahasiswa/LamaranList';
 import LamaranDetail from './pages/mahasiswa/LamaranDetail';
 import LogbookDetail from './pages/mahasiswa/LogbookDetail';
+import LogbookList from './pages/mahasiswa/LogbookList';
+import MagangList from './pages/mahasiswa/MagangList';
+import MagangDetailMhs from './pages/mahasiswa/MagangDetailMhs';
 
 // mitra
+import DashboardLayoutMitra from './components/layout/mitra/DashboardLayoutMitra';
 import DashboardMitra from './pages/mitra/DashboardMitra';
 import PelamarList from './pages/mitra/PelamarList';
 import PelamarDetail from './pages/mitra/PelamarDetail';
-import MagangList from './pages/mitra/MagangList';
+import MagangListMitra from './pages/mitra/MagangListMitra';
+import MagangDetailMitra from './pages/mitra/MagangDetailMitra';
 import CreateMagang from './pages/mitra/CreateMagang';
 
 function App() {
@@ -38,18 +44,23 @@ function App() {
         <Route path="/sign-up-mitra" element={<SignUpMitra />}/>
 
         {/* Mahasiswa */}
-        <Route path="/dashboard-mahasiswa" element={<DashboardMhs />} />
-        <Route path="/formpendaftaran" element={<FormPendaftaran />} />
-        <Route path="/lamaran-list" element={<LamaranList />} />
-        <Route path="/lamaran-detail" element={<LamaranDetail />} />
-        <Route path="/logbook-detail" element={<LogbookDetail />} />
+        <Route element={<DashboardLayoutMhs />}>
+          <Route path="/dashboard-mahasiswa" element={<DashboardMhs />} />
+          <Route path="/formpendaftaran" element={<FormPendaftaran />} />
+          <Route path="/lamaran-list" element={<LamaranList />} />
+          <Route path="/lamaran-detail" element={<LamaranDetail />} />
+          <Route path="/logbook-detail" element={<LogbookDetail />} />
+        </Route>
 
         {/* Mitra */}
-        <Route path="/dashboard-mitra" element={<DashboardMitra />} />
-        <Route path="/pelamar-list" element={<PelamarList />} />
-        <Route path="/pelamar-detail" element={<PelamarDetail />} />
-        <Route path="/magang-list" element={<MagangList />} />
-        <Route path="/create-magang" element={<CreateMagang />} />
+        <Route element={<DashboardLayoutMitra />}>
+          <Route path="/dashboard-mitra" element={<DashboardMitra />} />
+          <Route path="/pelamar-list" element={<PelamarList />} />
+          <Route path="/pelamar-detail" element={<PelamarDetail />} />
+          <Route path="/magang-list" element={<MagangListMitra />} />
+          <Route path="/magang-detail" element={<MagangDetailMitra />} />
+          <Route path="/create-magang" element={<CreateMagang />} />
+        </Route>
 
       </Routes>
     </div>

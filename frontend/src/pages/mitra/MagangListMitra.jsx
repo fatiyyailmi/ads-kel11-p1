@@ -1,6 +1,4 @@
-import DashboardLayoutMitra from "../../components/layout/mitra/DashboardLayoutMitra";
-
-const MagangList = () => {
+const MagangListMitra = () => {
     return (
         <DashboardLayoutMitra>
             <h1 className="text-3xl font-bold text-indigo-700">
@@ -10,4 +8,4 @@ const MagangList = () => {
     );
 };
 
-export default MagangList;
+export default MagangListMitra;

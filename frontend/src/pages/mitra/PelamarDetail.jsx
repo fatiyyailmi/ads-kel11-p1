@@ -1,5 +1,3 @@
-import DashboardLayoutMitra from "../../components/layout/mitra/DashboardLayoutMitra";
-
 const PelamarDetail = () => {
     return (
         <DashboardLayoutMitra>
