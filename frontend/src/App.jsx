@@ -17,7 +17,7 @@ import LamaranList from './pages/mahasiswa/LamaranList';
 import LamaranDetail from './pages/mahasiswa/LamaranDetail';
 import LogbookDetail from './pages/mahasiswa/LogbookDetail';
 import LogbookList from './pages/mahasiswa/LogbookList';
-import MagangList from './pages/mahasiswa/MagangList';
+import MagangListMhs from './pages/mahasiswa/MagangListMhs';
 import MagangDetailMhs from './pages/mahasiswa/MagangDetailMhs';
 
 // mitra
@@ -50,6 +50,9 @@ function App() {
           <Route path="/lamaran-list" element={<LamaranList />} />
           <Route path="/lamaran-detail" element={<LamaranDetail />} />
           <Route path="/logbook-detail" element={<LogbookDetail />} />
+          <Route path="/logbook-list" element={<LogbookList />} />
+          <Route path="/magang-list" element={<MagangListMhs />} />
+          <Route path="/magang-detail" element={<MagangDetailMhs />} />
         </Route>
 
         {/* Mitra */}

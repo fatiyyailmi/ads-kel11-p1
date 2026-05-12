@@ -1,4 +1,4 @@
-const MagangList = () => {
+const MagangListMhs = () => {
     return (
         <DashboardLayoutMhs>
             <h1 className="text-3xl font-bold text-indigo-700">
@@ -8,4 +8,4 @@ const MagangList = () => {
     );
 };
 
-export default MagangList;
+export default MagangListMhs;
