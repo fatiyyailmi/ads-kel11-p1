@@ -1,0 +1,33 @@
+import { useNavigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+const NextButton = ({
+  to = "/",
+  label = "Selengkapnya",
+}) => {
+
+  const navigate = useNavigate();
+
+  return (
+
+      <button
+        onClick={() => navigate(to)}
+        className="
+            flex items-center gap-2
+            text-indigo-600
+            text-sm
+            hover:underline
+        "
+      >
+
+        <span>
+            {label}
+        </span>
+
+        <ArrowRight size={16} />
+
+      </button>
+  );
+};
+
+export default NextButton;

@@ -3,19 +3,17 @@ const BidangCard = ({ icon, title }) => {
         <div className=" flex items-center bg-white border border-yellow-400 rounded-xl overflow-hidden w-full h-32 ">
 
             {/* ICON SECTION */}
-            <div className="h-full w-40 bg-yellow-50 flex items-center justify-center">
+            <div className="h-full w-30 bg-yellow-50 flex items-center justify-center">
                 {icon}
             </div>
 
             {/* TITLE */}
             <div className="flex-1 px-6">
-                <h2 className="text-xl font-semibold text-indigo-600">
+                <h2 className="text-xl font-semibold justicy-center text-indigo-600">
                     {title}
                 </h2>
 
             </div>
-
-
         </div>
     );
 };
