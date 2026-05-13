@@ -5,15 +5,15 @@ const CreateMagang = () => {
   return (
 
     <div className="flex flex-col items-center py-5">
-      <div className="w-full max-w-4xl mb-5">
 
+      <div className="w-full max-w-4xl mb-5">
         <BackButton
           color="text-bold-blue"
           position="relative"
         />
       </div>
+      
       <CreateMagangForm />
-
     </div>
 
   );

@@ -1,9 +1,7 @@
 import { useState } from "react";
-
 import FormField from "../../components/forms/FormField";
 import Button from "../../components/ui/Button";
 import { useNavigate } from "react-router-dom";
-
 import {
   Upload,
   House,
