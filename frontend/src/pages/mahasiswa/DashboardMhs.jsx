@@ -15,7 +15,7 @@ const DashboardMhs = () => {
     const [openPopup, setOpenPopup] = useState(false);
 
     return (
-        <div>
+        <div className="px-6 ">
             <h1 className="text-3xl font-bold text-indigo-700">
                 Selamat Datang, <span className="text-indigo-900">Fatiyya</span>!
             </h1>

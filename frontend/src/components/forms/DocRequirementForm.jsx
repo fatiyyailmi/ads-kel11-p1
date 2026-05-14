@@ -166,7 +166,7 @@ const [openPopup, setOpenPopup] = useState(false);
             "
           />
 
-            {/* BUTTON TEST */}
+            {/* BUTTON SIMPAN */}
             <div className="mt-10">
                 <Button
                     label="Simpan"
@@ -203,6 +203,7 @@ const [openPopup, setOpenPopup] = useState(false);
                     label="Lihat"
                     onClick={() => {
                        setOpenPopup(false);
+                       navigate("/magang-list-mitra")
                     }}
                     className="
                         bg-kuning-tua
