@@ -13,7 +13,7 @@ const NextButton = ({
       <button
         onClick={() => navigate(to)}
         className="
-            flex items-center gap-2
+            flex items-center gap-1
             text-indigo-600
             text-sm
             hover:underline
@@ -24,7 +24,7 @@ const NextButton = ({
             {label}
         </span>
 
-        <ArrowRight size={16} />
+        <ArrowRight size={12} />
 
       </button>
   );

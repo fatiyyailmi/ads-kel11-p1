@@ -5,27 +5,28 @@ const ReminderCard = ({
 }) => {
     
     return (
-        <div className="bg-white rounded-xl shadow-sm p-4 flex items-start justify-between w-full">
+        <div className="flex items-start justify-between w-full border-b border-gray-200 pb-4">
             
             {/* LEFT SECTION */}
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-3">
 
                 {/* CIRCLE */}
-                <div className="w-4 h-4 rounded-full border border-gray-500">
-                </div>
+               <div className="w-4 h-4 min-w-4 min-h-4 rounded-full border-1 border-gray-400 mt-1">
+               </div>
 
                 {/* TEXT */}
                 <div>
                     {/* TITLE */}
-                    <h2 className="text-lg font-semibold text-gray-900">
+                    <h2 className="text-md font-semibold text-gray-900">
                         {title}
                     </h2>
+                    {/* PROGRAM */}
+                    <p className="text-sm text-gray-700">
+                        {program}
+                    </p>
                 </div>
 
-                {/* PROGRAM */}
-                <p className="text-md text-gray-700">
-                        {program}
-                </p>
+                
 
             </div>
 

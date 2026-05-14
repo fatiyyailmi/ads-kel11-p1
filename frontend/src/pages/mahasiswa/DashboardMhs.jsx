@@ -3,6 +3,8 @@ import LamaranCard from "../../components/cards/LamaranCard";
 import ReminderCard from "../../components/cards/ReminderCard";
 import NextButton from "../../components/ui/NextButton";
 import logoShopee from "../../assets/logo-shopee.png";
+import ProgramSection from "../../components/cards/ProgramSection";
+
 import {
   House,
   BriefcaseBusiness,
@@ -13,6 +15,45 @@ import {
   Contact,
   FileClock
 } from "lucide-react";
+
+//nyoba dummy data program
+const magangPrograms = [
+    {
+        logo: logoShopee,
+        title: "UI/UX Designer Internship",
+        company: "Shopee Indonesia",
+        category: "Design",
+        location: "Jakarta",
+        deadline: "28 Mei 2026",
+    },
+
+    {
+        logo: logoShopee,
+        title: "Data Analyst Internship",
+        company: "Tokopedia",
+        category: "Data",
+        location: "Jakarta",
+        deadline: "28 Mei 2026",
+    },
+
+    {
+        logo: logoShopee,
+        title: "Digital Marketing Internship",
+        company: "Blibli",
+        category: "Marketing",
+        location: "Jakarta",
+        deadline: "28 Mei 2026",
+    },
+
+    {
+        logo: logoShopee,
+        title: "Software Engineer Internship",
+        company: "Traveloka",
+        category: "IT",
+        location: "Bandung",
+        deadline: "30 Mei 2026",
+    },
+];
 
 const DashboardMhs = () => {
     return (
@@ -26,19 +67,19 @@ const DashboardMhs = () => {
 
                 <BidangCard
                     icon = {
-                        <BriefcaseBusiness size={70} className="text-yellow-400"/>
+                        <BriefcaseBusiness size={60} className="text-yellow-400"/>
                     }
                     title = "Magang"
                 />
                 <BidangCard
                     icon = {
-                        <Trophy size={70} className="text-yellow-400" />
+                        <Trophy size={60} className="text-yellow-400" />
                     }
                     title = "Kompetisi"
                 />
                 <BidangCard
                     icon = {
-                        <BookOpen size={70} className="text-yellow-400" />
+                        <BookOpen size={60} className="text-yellow-400" />
                     }
                     title = "Studi Independen"
                 />
@@ -47,9 +88,7 @@ const DashboardMhs = () => {
             {/* AKTIVITAS SECTION */}
             <div className="grid grid-cols-3 gap-6 mt-10">
 
-                {/* ========================= */}
                 {/* LEFT SIDE - AKTIVITASMU */}
-                {/* ========================= */}
                 <div className="col-span-2">
 
                     {/* HEADER */}
@@ -57,7 +96,7 @@ const DashboardMhs = () => {
 
                         {/* TITLE */}
                         <h2 className="
-                            text-2xl
+                            text-xl
                             font-bold
                             text-indigo-700
                         ">
@@ -94,16 +133,14 @@ const DashboardMhs = () => {
                 </div>
 
 
-                 {/* ========================= */}
                  {/* RIGHT SIDE - REMINDER */}
-                 {/* ========================= */}
                 <div>
                     {/* HEADER */}
                     <div className="mb-4">
 
                         {/* TITLE */}
                         <h2 className="
-                            text-2xl
+                            text-xl
                             font-bold
                             text-indigo-700
                         ">
@@ -113,7 +150,7 @@ const DashboardMhs = () => {
                     </div>
 
                     {/* REMINDER LIST */}
-                    <div className="space-y-4">
+                    <div className="bg-white rounded-xl shadow-sm p-6 space-y-4">
 
                         <ReminderCard
                             title="Logbook Harian"
@@ -130,6 +167,37 @@ const DashboardMhs = () => {
                     </div>
 
                 </div>
+
+            </div>
+
+            {/* EXPLORE SECTION */}
+            <div className="mt-16">
+                <h2 className="
+                    text-xl
+                    font-bold
+                    text-indigo-700
+                    mb-8
+                ">
+                    Eksplor program-program sesuai minat!
+                </h2>
+
+                <ProgramSection
+                    sectionTitle="Program Magang"
+                    buttonTo="/program-magang"
+                    programs={magangPrograms}
+                />
+
+                <ProgramSection
+                    sectionTitle="Kompetisi"
+                    buttonTo="/kompetisi"
+                    programs={magangPrograms}
+                />
+
+                <ProgramSection
+                    sectionTitle="Studi Independen"
+                    buttonTo="/studi-independen"
+                    programs={magangPrograms}
+                />
 
             </div>
 
