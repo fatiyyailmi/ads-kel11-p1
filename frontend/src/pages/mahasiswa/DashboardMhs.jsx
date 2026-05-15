@@ -5,9 +5,6 @@ import NextButton from "../../components/ui/NextButton";
 import logoShopee from "../../assets/logo-shopee.png";
 import ProgramSection from "../../components/cards/ProgramSection";
 
-import { useState } from "react";
-import PopUpNotif from "../../components/ui/PopUpNotif";
-import Button from "../../components/ui/Button";
 import {
   House,
   BriefcaseBusiness,
@@ -57,36 +54,32 @@ const magangPrograms = [
         deadline: "30 Mei 2026",
     },
 ];
-  TriangleAlert
-} from "lucide-react";
-
 
 const DashboardMhs = () => {
-    const [openPopup, setOpenPopup] = useState(false);
-
     return (
-        <div className="px-6 ">
-            <h1 className="text-3xl font-bold text-indigo-700">
-                Selamat Datang, <span className="text-indigo-900">Fatiyya</span>!
+        <div>
+            <h1 className="text-3xl font-bold text-bold-blue">
+                Selamat Datang, <span className="text-bold-blue">Fatiyya</span>!
             </h1>
 
             {/* BIDANG CARD SECTION */}
             <div className="grid grid-cols-3 gap-6 mt-8">
+
                 <BidangCard
                     icon = {
-                        <BriefcaseBusiness size={50} className="text-yellow-400"/>
+                        <BriefcaseBusiness size={50} className="text-kuning-tua"/>
                     }
                     title = "Magang"
                 />
                 <BidangCard
                     icon = {
-                        <Trophy size={50} className="text-yellow-400" />
+                        <Trophy size={50} className="text-kuning-tua" />
                     }
                     title = "Kompetisi"
                 />
                 <BidangCard
                     icon = {
-                        <BookOpen size={50} className="text-yellow-400" />
+                        <BookOpen size={50} className="text-kuning-tua" />
                     }
                     title = "Studi Independen"
                 />
@@ -105,7 +98,7 @@ const DashboardMhs = () => {
                         <h2 className="
                             text-xl
                             font-bold
-                            text-indigo-700
+                            text-bold-blue
                         ">
                             Aktivitasmu
                         </h2>
@@ -149,7 +142,7 @@ const DashboardMhs = () => {
                         <h2 className="
                             text-xl
                             font-semibold
-                            text-indigo-700
+                            text-bold-blue
                         ">
                             Reminder
                         </h2>
@@ -175,61 +168,6 @@ const DashboardMhs = () => {
 
                 </div>
 
-            {/* BUTTON TEST */}
-            <div className="mt-10">
-                <button
-                    onClick={() => setOpenPopup(true)}
-                    className="
-                    bg-bold-blue
-                    text-white
-                    px-5
-                    py-3
-                    rounded-lg
-                    "
-                >
-                    Test Popup
-                </button>
-
-                {/* POPUP */}
-                <PopUpNotif
-                    isOpen={openPopup}
-                    onClose={() => setOpenPopup(false)}
-
-                    icon={
-                    <TriangleAlert
-                        size={90}
-                        className="text-red-600"
-                    />
-                    }
-
-                    title="Apakah Anda yakin?"
-
-                    description="Data akan terhapus permanen."
-                >
-
-                    <Button
-                    label="Kembali"
-                    onClick={() => setOpenPopup(false)}
-                    className="
-                        border
-                        border-bold-blue
-                        text-bold-blue
-                        bg-white
-                    "
-                    />
-
-                    <Button
-                    label="Hapus"
-                    onClick={() => {
-                        console.log("DELETE");
-                        setOpenPopup(false);
-                    }}
-                    className="
-                        bg-red-500
-                        text-white
-                    "
-                    />
-                </PopUpNotif>
             </div>
 
             {/* EXPLORE SECTION */}
@@ -237,7 +175,7 @@ const DashboardMhs = () => {
                 <h2 className="
                     text-xl
                     font-bold
-                    text-indigo-700
+                    text-bold-blue
                     mb-4
                 ">
                     Eksplor program-program sesuai minat mu!

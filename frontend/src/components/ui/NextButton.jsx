@@ -14,9 +14,9 @@ const NextButton = ({
         onClick={() => navigate(to)}
         className="
             flex items-center gap-1
-            text-indigo-600
+            text-bold-blue
             text-sm
-            hover:underl  ine 
+            hover:underline 
         "
       >
 

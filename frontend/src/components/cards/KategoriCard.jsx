@@ -18,16 +18,16 @@ import {
 
 const BidangCard = ({ icon, title }) => {
     return (
-        <div className=" flex items-center bg-white border border-yellow-400 rounded-xl overflow-hidden w-70 h-25 ">
+        <div className=" flex items-center bg-white border border-kuning-tua rounded-xl overflow-hidden w-70 h-25 ">
 
             {/* ICON SECTION */}
-            <div className="h-full w-30 bg-yellow-50 flex items-center justify-center">
+            <div className="h-full w-30 bg-kuning-muda flex items-center justify-center">
                 {icon}
             </div>
 
             {/* TITLE */}
             <div className="flex-1 px-6">
-                <h2 className="text-xl font-semibold justicy-center text-indigo-600">
+                <h2 className="text-xl font-semibold justicy-center text-bold-blue">
                     {title}
                 </h2>
 
