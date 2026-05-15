@@ -53,6 +53,8 @@ const magangPrograms = [
         location: "Bandung",
         deadline: "30 Mei 2026",
     },
+
+    
 ];
 
 const DashboardMhs = () => {
@@ -83,6 +85,10 @@ const DashboardMhs = () => {
                     }
                     title = "Studi Independen"
                 />
+            </div>
+
+            <div className=
+                "border-b border-indigo-200 mt-10">
             </div>
             
             {/* AKTIVITAS SECTION */}
@@ -199,6 +205,10 @@ const DashboardMhs = () => {
                     programs={magangPrograms}
                 />
 
+            </div>
+
+            <div className=
+                "border-b border-indigo-200 mt-10">
             </div>
 
         </div>

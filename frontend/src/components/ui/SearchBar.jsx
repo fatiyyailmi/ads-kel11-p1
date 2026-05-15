@@ -9,9 +9,45 @@ const SearchBar = ({
     return (
         <div className ="
             flex items-center
-            bg-indigo-50
+            bg-light-blue-2
+            rounded-full
+            px-4
+            py-1
+            w-full
+            
+
+            border
+            border-transparent
+            focus-within:border-indigo-400
+            transition
         ">
+            {/* ICON */}
+            <Search
+                size={18}
+                className="text-indigo-500"
+            />
+
+            {/* INPUT */}
+            <input
+                type="text"
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                className="
+                    bg-transparent
+                    outline-none
+                    ml-4
+                    w-full
+                    text-lg
+
+                    text-gray-700
+                    placeholder:text-indigo-300
+                "
+
+            />
 
         </div>
-    )
-}
+    );
+};
+
+export default SearchBar;
