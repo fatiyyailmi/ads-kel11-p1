@@ -58,8 +58,8 @@ const magangPrograms = [
 const DashboardMhs = () => {
     return (
         <div>
-            <h1 className="text-3xl font-bold text-indigo-700">
-                Selamat Datang, <span className="text-indigo-900">Fatiyya</span>!
+            <h1 className="text-3xl font-bold text-bold-blue">
+                Selamat Datang, <span className="text-bold-blue">Fatiyya</span>!
             </h1>
 
             {/* BIDANG CARD SECTION */}
@@ -67,19 +67,19 @@ const DashboardMhs = () => {
 
                 <BidangCard
                     icon = {
-                        <BriefcaseBusiness size={50} className="text-yellow-400"/>
+                        <BriefcaseBusiness size={50} className="text-kuning-tua"/>
                     }
                     title = "Magang"
                 />
                 <BidangCard
                     icon = {
-                        <Trophy size={50} className="text-yellow-400" />
+                        <Trophy size={50} className="text-kuning-tua" />
                     }
                     title = "Kompetisi"
                 />
                 <BidangCard
                     icon = {
-                        <BookOpen size={50} className="text-yellow-400" />
+                        <BookOpen size={50} className="text-kuning-tua" />
                     }
                     title = "Studi Independen"
                 />
@@ -98,7 +98,7 @@ const DashboardMhs = () => {
                         <h2 className="
                             text-xl
                             font-bold
-                            text-indigo-700
+                            text-bold-blue
                         ">
                             Aktivitasmu
                         </h2>
@@ -142,7 +142,7 @@ const DashboardMhs = () => {
                         <h2 className="
                             text-xl
                             font-semibold
-                            text-indigo-700
+                            text-bold-blue
                         ">
                             Reminder
                         </h2>
@@ -175,7 +175,7 @@ const DashboardMhs = () => {
                 <h2 className="
                     text-xl
                     font-bold
-                    text-indigo-700
+                    text-bold-blue
                     mb-4
                 ">
                     Eksplor program-program sesuai minat mu!

@@ -57,10 +57,10 @@ const ProgramCard = ({
                 px-3 py-1
                 bg-yellow-100
                 border
-                border-yellow-400
+                border-kuning-tua
                 rounded-full
                 text-xs
-                text-indigo-700
+                text-bold-blue
                 mb-3
                 ">    
                 {category} {/* nanti disesuaikan sm be nya apa */}
@@ -80,10 +80,10 @@ const ProgramCard = ({
                 {/* DEADLINE */}
                 <div className="text-right">
 
-                    <p className="text-xs text-indigo-600">
+                    <p className="text-xs text-bold-blue">
                          Batas Pendaftaran 
                     </p>
-                    <p className="text-xs font-semibold text-indigo-700">
+                    <p className="text-xs font-semibold text-bold-blue">
                         {deadline}
                     </p>
 

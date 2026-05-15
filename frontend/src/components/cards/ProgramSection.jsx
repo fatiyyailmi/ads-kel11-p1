@@ -8,7 +8,7 @@ const ProgramSection = ({
 }) => {
 
     return (
-        <div className="mb-12">
+        <div className="mb-6">
 
             {/* HEADER */}
             <div className="
