@@ -43,7 +43,7 @@ const Table = ({
                     px-6
                     py-4
                     border-t
-                    border-b
+                    border-y
                     border-light-blue
                     text-black ">
 
