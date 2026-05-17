@@ -283,7 +283,7 @@ const MagangListMhs = () => {
                 <div
                     className="
                         flex
-                        gap-6
+                        gap-4
                         overflow-x-auto
                         scrollbar-hide
                     "

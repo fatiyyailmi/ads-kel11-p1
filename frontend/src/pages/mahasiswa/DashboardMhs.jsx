@@ -192,19 +192,19 @@ const DashboardMhs = () => {
 
                 <ProgramSection
                     sectionTitle="Program Magang"
-                    buttonTo="/program-magang"
+                    buttonTo="/magang-list"
                     programs={magangPrograms}
                 />
 
                 <ProgramSection
                     sectionTitle="Kompetisi"
-                    buttonTo="/kompetisi"
+                    buttonTo="/kompetisi-list"
                     programs={magangPrograms}
                 />
 
                 <ProgramSection
                     sectionTitle="Studi Independen"
-                    buttonTo="/studi-independen"
+                    buttonTo="/stupen-list"
                     programs={magangPrograms}
                 />
 

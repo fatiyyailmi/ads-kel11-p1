@@ -139,7 +139,7 @@ const LogbookList = () => {
 
   return (
 
-    <div className="px-6 space-y-8">
+    <div className="space-y-8">
 
       {/* HEADER */}
     <div className="flex items-start justify-between flex-wrap gap-2">
