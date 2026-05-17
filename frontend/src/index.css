@@ -22,6 +22,19 @@ body {
 
   --color-kuning-tua: #FDC500;
   --color-kuning-muda: #FFF7E6;
+  
+  --color-hijau-muda-status: #D8FFDE;
+  --color-hijau-tua-status: #0C8C00;
+
+  --color-merah-tua-status: #A71B1D;
+  --color-merah-muda-status: #FFDDDD;
+
+  --color-biru-tua-status: #2A86FF;
+  --color-biru-muda-status: #D0F5FF;
+  
+  --color-kuning-tua-status: #FDC500;
+  --color-kuning-muda-status: #FFFFE5;
+  --color-kuning-tua-secondary: #CA8A00;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

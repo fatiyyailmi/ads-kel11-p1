@@ -14,7 +14,7 @@ const Status = ({ status }) => {
     if (status === "Diterima") {
 
         statusStyle =
-            "bg-green-100 text-green-700 border-green-500";
+            "bg-hijau-muda-status text-hijau-tua-status border-hijau-tua-status";
 
         statusIcon = <CheckCheck size={14} />;
     }
@@ -23,7 +23,7 @@ const Status = ({ status }) => {
     else if (status === "Ditolak") {
 
         statusStyle =
-            "bg-red-100 text-red-700 border-red-500";
+            "bg-merah-muda-status text-merah-tua-status merah-tua-status";
 
         statusIcon = <CircleX size={14} />;
     }
@@ -32,7 +32,7 @@ const Status = ({ status }) => {
     else if (status === "Wawancara") {
 
         statusStyle =
-            "bg-blue-100 text-blue-700 border-blue-500";
+            "bg-biru-muda-status text-biru-tua-status border-biru-tua-status";
 
         statusIcon = <Contact size={14} />;
     }
@@ -41,7 +41,7 @@ const Status = ({ status }) => {
     else {
 
         statusStyle =
-            "bg-yellow-100 text-yellow-700 border-yellow-500";
+            "bg-kuning-muda-status text-kuning-tua-secondary border-kuning-tua-secondary";
 
         statusIcon = <FileClock size={14} />;
     }

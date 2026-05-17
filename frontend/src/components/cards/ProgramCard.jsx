@@ -1,4 +1,4 @@
-import {MapPin} from "lucide-react";
+import { MapPin } from "lucide-react";
 
 const ProgramCard = ({
     logo,
@@ -6,91 +6,103 @@ const ProgramCard = ({
     company,
     category,
     location,
-    deadline
+    deadline,
+    className = "",
 }) => {
+
     return (
-        <div className="
-            bg-white
-            rounded-xl
-            shadow-sm
-            p-4
-            min-w-[250px]
-            hover:shadow-lg
-            hover:-translate-y-1
-            hover:bg-indigo-100
 
-            transition-all
-            duration-300
-            cursor-pointer">
+        <div
+            className={`
+                bg-white
+                rounded-xl
+                shadow-sm
 
-            {/* TOP SECTION */}
+                px-4
+                py-4
+
+                hover:shadow-lg
+                hover:-translate-y-1
+                hover:bg-indigo-50
+
+                transition-all
+                duration-300
+                cursor-pointer
+
+                ${className}
+            `}
+        >
+
+            {/* TOP */}
             <div className="flex items-start gap-4">
-                {/* LOGO */}
+
                 <img
                     src={logo}
                     alt={company}
                     className="w-10 h-10 object-contain"
                 />
 
-                {/* TEXT */}
                 <div>
-                    {/* TITLE */}
-                    <h2 className="text-md font-semibold text-gray-900">
+
+                    <h2 className="text-lg font-semibold text-gray-900">
                         {title}
                     </h2>
 
-                    {/* COMPANY */}
                     <p className="text-sm text-gray-700">
                         {company}
                     </p>
+
                 </div>
 
             </div>
 
-            <div className=
-                "border-b border-indigo-200 my-3">
-            </div>
+            {/* LINE */}
+            <div className="border-b border-indigo-200 my-3"></div>
 
-            {/* CATEGORY BIDANG */}
+            {/* CATEGORY */}
             <div className="
                 inline-block
-                px-3 py-1
-                bg-yellow-100
+                px-3
+                py-1
+
+                bg-kuning-muda
                 border
                 border-kuning-tua
+
                 rounded-full
-                text-xs
+
+                text-sm
                 text-bold-blue
-                mb-3
-                ">    
-                {category} {/* nanti disesuaikan sm be nya apa */}
+
+                mb-5
+            ">
+                {category}
             </div>
 
-            {/* BOTTOM SECTION */}
+            {/* BOTTOM */}
             <div className="flex items-end justify-between">
 
-                {/* LOCATION */}
-                <div className =
-                "flex items-center gap-1 text-xs text-gray-700">
+                <div className="flex items-center gap-1 text-sm text-gray-700">
 
-                    <MapPin size={12}/>
-                    <span> {location} </span>
+                    <MapPin size={14} />
+
+                    <span>{location}</span>
+
                 </div>
 
-                {/* DEADLINE */}
                 <div className="text-right">
 
                     <p className="text-xs text-bold-blue">
-                         Batas Pendaftaran 
+                        Batas Pendaftaran
                     </p>
-                    <p className="text-xs font-semibold text-bold-blue">
+
+                    <p className="text-sm font-semibold text-bold-blue">
                         {deadline}
                     </p>
 
                 </div>
 
             </div>
-
 
         </div>
     );

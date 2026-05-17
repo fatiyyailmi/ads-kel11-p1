@@ -37,6 +37,7 @@ const ProgramSection = ({
                 flex gap-4
                 overflow-x-auto
                 scrollbar-hide
+                pb-2
             ">
 
                 {programs.map((program, index) => (
@@ -48,6 +49,12 @@ const ProgramSection = ({
                         category={program.category}
                         location={program.location}
                         deadline={program.deadline}
+
+                        className="
+                            min-w-[350px]
+                            max-w-[350px]
+                            flex-shrink-0
+                        "
                     />
                 ))}
                 

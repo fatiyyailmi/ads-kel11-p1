@@ -1,39 +1,59 @@
-import {
-    MonitorCog,
-    ChartColumnBig,
-    TabletSmartphone,
-    MessageCircleHeart,
-    BadgeDollarSign,
-    UserStar,
-    Truck,
-    ScrollText,
-    Palette,
-    Wrench,
-    Microscope,
-    HandShake,
-    Scale,
-    HeartPulse
 
-} from "lucide-react";
+const KategoriCard =({
+    icon,
+    title,
+    onClick,
+}) => {
 
-const BidangCard = ({ icon, title }) => {
     return (
-        <div className=" flex items-center bg-white border border-kuning-tua rounded-xl overflow-hidden w-70 h-25 ">
+        <button
+            onClick={onClick}
+            className="
+                min-w-[180px]
 
-            {/* ICON SECTION */}
-            <div className="h-full w-30 bg-kuning-muda flex items-center justify-center">
+                bg-kuning-muda
+                border-1
+                border-kuning-tua
+
+                rounded-xl
+
+                px-2
+                py-2
+
+                flex
+                flex-col
+                items-center
+                justify-center
+
+                gap-2
+                
+                hover:bg-kuning-muda
+                hover:-translate-y-1
+                hover:shadow-md
+                cursor-pointer
+
+                transition-all
+                duration-300
+
+            "
+        >
+            {/* ICON */}
+            <div className="text-kuning-tua">
                 {icon}
             </div>
 
             {/* TITLE */}
-            <div className="flex-1 px-6">
-                <h2 className="text-xl font-semibold justicy-center text-bold-blue">
-                    {title}
-                </h2>
+            <p className="
+                text-sm
+                text-center
+                font-medium
+                text-bold-blue">
+                
+                {title}
+            </p>
 
-            </div>
-        </div>
+        </button>
     );
 };
 
-export default BidangCard;
+export default KategoriCard;
